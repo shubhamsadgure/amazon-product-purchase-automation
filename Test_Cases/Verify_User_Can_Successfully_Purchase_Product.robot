@@ -7,6 +7,7 @@ Resource   ../keywords/AmazonKeywords.robot
 
 *** Test Cases ***
 Verify End-to-End Product Purchase Flow
+    [Tags]    smoke    regression
     Open Amazon Home Page
     Verify Amazon Page Title
     Search Product
