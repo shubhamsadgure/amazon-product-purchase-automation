@@ -43,7 +43,7 @@ Open Amazon Home Page
     Open Browser    ${URL}    ${BROWSER}    options=${options}
 
     Maximize Browser Window
-    Set Selenium Implicit Wait    10s
+    Set Selenium Implicit Wait    30s
     Sleep    10s
 
 
@@ -57,7 +57,6 @@ Open Browser With Local Network Allowed
     Call Method    ${options}    add_experimental_option    prefs    ${prefs}
 
     Open Browser    ${URL}    ${BROWSER}    options=${options}
-    Sleep    10s
 
 
 
@@ -66,7 +65,7 @@ Verify Amazon Page Title
     ${actual_title}=    Get Title
     Should Be Equal    ${actual_title}    ${VALIDATE_TITLE_MSG}
     Log To Console    ${actual_title}
-    Sleep    2s
+
 
 
 Search Product
@@ -74,7 +73,7 @@ Search Product
     Wait Until Element Is Visible    ${searchBoxHomePahe}
     Input Text    ${searchBoxHomePahe}    ${PRODUCT_NAME}
     Click Button  ${searchButton}
-    Sleep    2s
+
 
 
 Validate Product Matches Search Keyword
@@ -87,7 +86,7 @@ Validate Product Matches Search Keyword
     Sleep    2s
     ${handles}=    Get Window Handles
     Switch Window    ${handles}[-1]
-    Sleep    5s
+
 
 
 Validate Product Details On Product Page
