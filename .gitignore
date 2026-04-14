@@ -1,0 +1,22 @@
+# Robot Framework Results
+output.xml
+log.html
+report.html
+
+# Screenshots
+*.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs
+*.log
